@@ -1,0 +1,163 @@
+:root {
+  --primary: #008dda;
+  --fnt: #fda403;
+  --hvr: #fff;
+}
+/* <========== Media Query ==========>*/
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+
+  /* 
+        App-Bar Start */
+  .app-brand h1 {
+    font-size: 2.5rem;
+  }
+
+  .app-extra {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .appbar.active {
+    right: 0;
+  }
+
+  .appbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 20rem;
+    background-color: var(--fnt);
+    transition: 0.5s;
+  }
+
+  .appbar a {
+    display: block;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 20px;
+    color: var(--hvr);
+  }
+  /* 
+        App-Bar */
+
+  /* 
+        Detail Content */
+  .detail-header img {
+    height: 300px;
+  }
+  /* 
+        Detail Content */
+
+  /* 
+        Content Tamplate Start */
+  .content .list-restaurant {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .restaurant-title {
+    height: 400px;
+    width: 350px;
+  }
+
+  .restaurant-item-content a h3 {
+    font-size: 2.4rem;
+  }
+  /* 
+        Content Tamplate End */
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+  /* 
+        Content Tamplate Start */
+  .content .list-restaurant {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .restaurant-title {
+    height: 380px;
+    width: 190px;
+  }
+
+  .restaurant-title .restaurant-item-header .restaurant-rating h2 {
+    font-size: 1rem;
+  }
+
+  .restaurant-item-header img {
+    height: 120px;
+  }
+
+  .restaurant-item-content a h3 {
+    font-size: 2.4rem;
+  }
+  /* 
+        Content Tamplate End */
+
+  /* 
+        Detail Content */
+  .detail-header img {
+    height: 200px;
+  }
+  /* 
+            Detail Content */
+}
+
+@media (max-width: 375px) {
+  /* 
+        Content Tamplate Start */
+  .content .list-restaurant{
+    display: flex;
+  }
+
+  .restaurant-title {
+    height: 300px;
+    width: 300px;
+  }
+
+  .restaurant-item-header img {
+    height: 150px;
+  }
+
+  .restaurant-item-content a h3 {
+    font-size: 2.4rem;
+  }
+
+  /* 
+        Content Tamplate End */
+}
+
+@media (max-width: 320px) {
+  /* 
+        Content Tamplate Start */
+  .content .list-restaurant{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-title {
+    height: 380px;
+    width: 250px;
+  }
+
+  .restaurant-item-content a h3 {
+    font-size: 2.4rem;
+  }
+  /* 
+        Content Tamplate End */
+
+  /* 
+        Detail Content */
+  .detail-header img {
+    height: 150px;
+  }
+  /* 
+        Detail Content */
+}

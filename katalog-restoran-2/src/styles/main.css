@@ -1,0 +1,397 @@
+:root {
+  --primary: #008dda;
+  --fnt: #fda403;
+  --hvr: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--primary);
+  color: black;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 9999;
+  background-color: #fff;
+  padding: 10px;
+  border: 2px solid #000;
+}
+/* Skip Link */
+
+/* 
+    App-Bar Start */
+/* App-Bar */
+.app-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 5%;
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0px 5px 15px rgba(0, 0, 5, 0.8);
+}
+
+/* App-Bar-Brand */
+.app-brand {
+  min-width: 44px;
+  min-height: 44px;
+}
+.app-bar .app-brand h1 {
+  font-family: "Mochiy Pop One", sans-serif;
+  color: var(--hvr);
+  font-size: 1.8rem;
+}
+
+.app-bar .app-brand span {
+  color: var(--fnt);
+}
+
+/* appbar */
+.appbar a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-family: "Playpen Sans", cursive;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--hvr);
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.appbar a:hover {
+  color: var(--fnt);
+  transition: 0.2s;
+}
+
+/* Hamburger-Menu */
+.app-extra {
+  display: none;
+}
+
+.app-extra button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  color: var(--hvr);
+  background-color: var(--primary);
+}
+
+.app-extra button:hover {
+  color: var(--primary);
+  background-color: #695d4f;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+/* Focus-Mode */
+.appbar a:focus {
+  outline: 2px solid var(--fnt);
+}
+
+.app-extra button:focus {
+  outline: 2px solid var(--fnt);
+}
+/* 
+    App-Bar End */
+
+/* 
+    Jumbotron Start */
+.antihero {
+  display: flex;
+  height: 380px;
+  background-image: linear-gradient(rgba(0, 0, 5, 0.8), rgba(0, 0, 5, 0.5)), url(../public/img/hero-image_2.jpg);
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-size: cover;
+}
+
+.antihero .heroIc {
+  font-family: "Playpen Sans", cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.antihero .heroIc span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.antihero h4 {
+  letter-spacing: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* 
+    Jumbotron End */
+
+/* 
+    Main Content Start*/
+main {
+  padding: 30px;
+}
+
+.content-header {
+  padding: 0 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Playpen Sans", cursive;
+  color: var(--hvr);
+  background-color: var(--primary);
+}
+/* 
+    Main Content End */
+
+/* 
+    Content Tamplate Start */
+.content .list-restaurant {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.restaurant-title:focus {
+  outline: 2px solid var(--fnt);
+}
+
+.restaurant-title {
+  height: 450px;
+  width: 325px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 5, 0.2);
+}
+
+.restaurant-item-header p {
+  position: absolute;
+  color: var(--hvr);
+  background-color: var(--primary);
+  padding: 15px 10px 15px 10px;
+  border-radius: 15px 0 15px 0;
+}
+
+.restaurant-item-header img {
+  height: 250px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.restaurant-title .restaurant-item-header .restaurant-rating {
+  display: inline-block;
+  padding: 0 0.5rem 0 0.1rem;
+  border-radius: 30px;
+  background-color: var(--hvr);
+  color: black;
+}
+
+.restaurant-item-content a h3 {
+  font-size: 1rem;
+  font-family: "Playpen Sans", cursive;
+  color: black;
+  cursor: pointer;
+}
+
+.restaurant-item-content p {
+  text-align: justify;
+}
+/* 
+    Content Tamplate End */
+
+/* 
+    Detail Template Start */
+.restaurant-detail {
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 5, 0.2);
+}
+
+.detail-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-header h2 {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Playpen Sans", cursive;
+  font-size: 2rem;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--primary);
+  color: var(--hvr);
+}
+
+.detail-header img {
+  width: 100%;
+  padding: 3px;
+  margin-bottom: 1rem;
+  border: 2px solid var(--hvr);
+  border-radius: 15px;
+}
+
+.detail-info {
+  font-size: 1.3rem;
+}
+
+.detail-info h3 {
+  text-align: center;
+  font-family: "Playpen Sans", cursive;
+  color: var(--hvr);
+  background-color: var(--primary);
+}
+
+.alamat h4 {
+  color: var(--hvr);
+}
+
+.menu {
+  font-size: 1.3rem;
+}
+
+.menu h3 {
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: "Playpen Sans", cursive;
+  color: var(--hvr);
+  background-color: var(--primary);
+}
+
+.makanan {
+  padding: 5px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: var(--primary);
+  box-shadow: 0px 5px 15px rgba(0, 0, 5, 0.2);
+}
+
+.makanan h4 {
+  text-align: center;
+  color: rgb(77, 68, 58);
+}
+
+.minuman {
+  padding: 5px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: var(--primary);
+  box-shadow: 0px 5px 15px rgba(0, 0, 5, 0.2);
+}
+
+.minuman h4 {
+  text-align: center;
+  color: rgb(77, 68, 58);
+}
+
+.detail-review-header {
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: "Playpen Sans", cursive;
+  color: var(--hvr);
+  background-color: var(--primary);
+}
+
+.judul-review {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0.5rem 2rem;
+}
+
+.ulasan-item {
+  padding: 20px 22px;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 5, 0.2);
+  color: black;
+}
+
+.restaurant-detail .review-item_bold {
+  font-weight: bold;
+}
+
+.restaurant-detail .review-item_bold {
+  font-weight: bold;
+}
+
+.detail-description h3 {
+  font-family: "Playpen Sans", cursive;
+  text-align: center;
+  color: var(--hvr);
+  background-color: var(--primary);
+}
+
+.detail-description p {
+  text-align: justify;
+}
+
+/* 
+    Detail Template End */
+
+/*
+    Like */
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer Start */
+footer {
+  padding: 1rem;
+  background-color: var(--hvr);
+}
+
+footer p {
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+footer p span {
+  color: var(--fnt);
+}
+/* Footer End */

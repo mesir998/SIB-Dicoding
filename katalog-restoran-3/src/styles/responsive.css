@@ -1,0 +1,205 @@
+:root {
+  --primary: #008dda;
+  --fnt: #fda403;
+  --hvr: #fff;
+}
+
+/* <========== Media Query ===========> */
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+
+  /* App-Bar Start */
+  .app-brand h1 {
+    font-size: 2.5rem;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .app-extra {
+    display: inline-block;
+  }
+
+  .appbar.active {
+    right: 0;
+  }
+
+  .appbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 20rem;
+    background-color: var(--fnt);
+    transition: 0.5s;
+  }
+
+  .appbar a {
+    display: block;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 20px;
+    color: var(--hvr);
+  }
+  /* App-Bar End */
+
+  /* Hero Section */
+  .antihero {
+    display: flex;
+    height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 5, 0.8), rgba(0, 0, 5, 0.5)), url("../public/images/hero-image_2-medium.jpg");
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+  }
+
+  /* Detail Content */
+  .detail-header img {
+    height: 300px;
+  }
+
+  /* Content Template Start */
+  .content .restaurant-list {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .restaurant-title {
+    height: 400px;
+    width: 350px;
+  }
+
+  .restaurant-item-content h3 a {
+    font-size: 2.44rem;
+  }
+
+  
+  /* Content Template End */
+}
+
+/* Mobile */
+@media (max-width: 424px) {
+  html {
+    font-size: 65%;
+  }
+  .app-bar .app-brand h1 {
+    font-size: 1.8rem;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .antihero h4,
+  .antihero p {
+    font-size: 1rem;
+  }
+
+  /* Hero Section */
+  .antihero {
+    display: flex;
+    height: 280px;
+    background-image: linear-gradient(rgba(0, 0, 5, 0.8), rgba(0, 0, 5, 0.5)), url("../public/images/hero-image_2-small.jpg");
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+  }
+
+  /* Content Template Start */
+  .content .restaurant-list {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .restaurant-title {
+    height: 390px;
+    width: 190px;
+  }
+
+  .restaurant-title .restaurant-item-header .restaurant-rating h2 {
+    font-size: 1rem;
+  }
+
+  .restaurant-item-header img {
+    height: 150px;
+  }
+
+  .restaurant-item-content h3 a {
+    font-size: 2.8rem;
+  }
+
+  .restaurant-item-header p {
+    position: absolute;
+    color: var(--hvr);
+    background-color: var(--primary);
+    padding: 5px 15px;
+    border-radius: 15px 0 15px 0;
+  }
+  /* Content Template End */
+
+  /* Detail Content */
+  .detail-header img {
+    height: 200px;
+  }
+}
+
+/* Smaller Mobile */
+@media (max-width: 368px) {
+  html {
+    font-size: 55%;
+  }
+  /* Content Template Start */
+  .content .restaurant-list {
+    display: flex;
+  }
+
+  .restaurant-title {
+    height: 310px;
+    width: 300px;
+  }
+
+  .restaurant-item-header img {
+    height: 150px;
+  }
+
+  .restaurant-item-content h3 a {
+    font-size: 3.32rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+  /* Content Template End */
+}
+
+/* Smallest Mobile */
+@media (max-width: 320px) {
+  html {
+    font-size: 50%;
+  }
+  /* Content Template Start */
+  .content .restaurant-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-title {
+    height: 380px;
+    width: 250px;
+  }
+
+  .restaurant-item-content h3 a {
+    font-size: 3.67rem;
+  }
+  /* Content Template End */
+
+  /* Detail Content */
+  .detail-header img {
+    height: 150px;
+  }
+}

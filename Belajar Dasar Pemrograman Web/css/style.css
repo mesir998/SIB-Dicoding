@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1b1a55;
+}
+
+h2,
+h3 {
+  color: #59b4c3;
+}
+
+footer {
+  padding: 20px;
+  color: #59b4c3;
+  background-color: #070f2b;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.icon-link {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.icon-link:hover {
+  color: #59b4c3;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile img {
+  max-width: 200px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5rem 7%;
+  background-color: #070f2b;
+  color: #fff;
+}
+
+.pou {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #070f2b;
+  text-align: center;
+  color: #59b4c3;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #070f2b;
+  border-bottom: 1px solid #070f2b;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.navbar .logo span {
+  color: #59b4c3;
+}
+
+.navbar .navbar-nav a {
+  color: #ffff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #59b4c3;
+  transition: 0.3s;
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #59b4c3;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+main {
+  padding: 20px;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+}
+
+header {
+  display: inline;
+}
+
+.blok h3 {
+  text-align: center;
+  font-size: 25px;
+  color: #59b4c3;
+}
+
+.poto {
+  font-size: 25px;
+  font-weight: 700;
+  color: #59b4c3;
+}
+
+.bjir {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 75%;
+  }
+
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .brodi .lir {
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: red;
+    width: 30rem;
+    height: 100vh;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+
+  footer {
+    flex-flow: column nowrap;
+    align-self: center;
+  }
+
+  .bjir {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 30rem;
+    background-color: #59b4c3;
+    height: 100vh;
+    font-size: 30%;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #ffff;
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: #1b1a55;
+  }
+}

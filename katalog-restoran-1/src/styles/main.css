@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Playpen+Sans&display=swap");
+
+:root {
+  --primary: #008dda;
+  --fnt: #fda403;
+  --hvr: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--primary);
+  color: black;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 10px;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+  padding: 10px;
+  border: 2px solid #000;
+  color: #000;
+}
+/* Skip Link */
+
+/* Appbar Start */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 5%;
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+nav .app-logo {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--hvr);
+  font-style: italic;
+}
+
+nav .app-logo span {
+  color: var(--fnt);
+}
+
+nav .app-appbar a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-family: "Playpen Sans", cursive;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--hvr);
+  min-height: 44px;
+  min-width: 44px;
+}
+
+nav .app-appbar a:hover {
+  color: var(--fnt);
+  transition: 0.2s;
+}
+
+nav .app-appbar a::after {
+  display: block;
+  border-bottom: 2px solid var(--hvr);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+nav .app-appbar a:hover::after {
+  transform: scaleX(0.5);
+}
+
+nav .app-extra button {
+  color: var(--hvr);
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background-color: var(--primary);
+  transition: 0.2s;
+}
+
+nav .app-extra button:hover {
+  color: var(--fnt);
+  cursor: pointer;
+}
+
+nav .app-extra {
+  display: none;
+}
+
+a:focus {
+  outline: 2px solid var(--fnt);
+}
+
+button:focus {
+  outline: 2px solid var(--fnt);
+}
+
+/* Appbar End */
+
+/* Jumbotron Start */
+.antiHero {
+  display: flex;
+  height: 380px;
+  background-image: linear-gradient(rgba(0, 0, 5, 0.8), rgba(0, 0, 5, 0.5)), url(../public/images/heros/hero-image_2.jpg);
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.antiHero .heroIc {
+  font-family: "Playpen Sans", cursive;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #fff;
+}
+
+.antiHero .heroIc span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.antiHero h4 {
+  letter-spacing: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Jumbotron End */
+
+/* Container Cards Start */
+.containerCards h2 {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--hvr);
+}
+
+.listCards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.judulKartu:focus {
+  outline: 2px solid var(--fnt);
+}
+
+.listCards .judulKartu {
+  height: 340px;
+  width: 320px;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 5, 0.2);
+}
+
+.listCards .judulKartu .gamcit p {
+  position: absolute;
+  color: var(--hvr);
+  background-color: var(--primary);
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px 0 15px 0;
+}
+
+.listCards .judulKartu .gamcit img {
+  height: 200px;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.listCards .judulKartu .itemCards {
+  border-top: 1px solid rgb(105, 93, 79, 0.5);
+  padding-top: 5px;
+}
+
+.listCards.judulKartu .itemCards img {
+  height: 50px;
+  width: 50px;
+}
+
+.listCards .judulKartu .itemCards p {
+  text-align: justify;
+  font-size: 12px;
+}
+/* Container Cards End */
+
+/* Footer Start */
+
+footer h1 {
+  display: flex;
+  padding: 0.5rem;
+  font-size: 24px;
+  background-color: var(--hvr);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+/* Footer End */
+
+/* <========== Media Query ==========>*/
+/* Computer */
+
+/* Laptop */
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+
+  /* Navbar */
+  nav .app-logo {
+    font-size: 2.38rem;
+  }
+
+  nav .app-appbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--primary);
+    width: 20rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  nav .app-extra {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  nav .app-appbar.active {
+    right: 0;
+  }
+
+  nav .app-appbar a {
+    display: block;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 20px;
+    color: var(--hvr);
+  }
+  /* Navbar */
+  .antiHero {
+    height: auto; /* Membuat tinggi gambar menyesuaikan dengan konten */
+    min-height: 280px; /* Menjamin tinggi gambar minimal */
+  }
+}
+
+/* Mobile */
+@media (max-width: 456px) {
+  html {
+    font-size: 50%;
+  }
+}
